@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit product</title>
+</head>
+<body>
+    <h1>edit a product</h1>
+    <form action="/products/<%=foundProduct._id%>?_method=PUT" method="POST">
+        <input type="text" name="name" placeholder="product name" value="<%=foundProduct.name%>">
+        <input type="text" name="price" placeholder="product price" value="<%=foundProduct.price%>">
+        <select name="category" id="category">
+            <option value="veg">vegetable</option>
+            <option value="fruit">fruit</option>
+            <option value="vf">vegetable & fruit</option>
+            <option value="dairy">dairy</option>
+        </select>
+        <button>save</button>
+    </form>
+
+    <a href='/products/<%=foundProduct._id%>'>cancel</a>
+
+</body>
+</html>

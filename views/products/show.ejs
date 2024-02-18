@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>show page : specific product</title>
+</head>
+
+<body>
+
+<h1>specific product:<%= foundProduct.name%> </h1>
+    <ul>
+        <li>price : <%= foundProduct.price%></li>
+        <li>category : <%= foundProduct.category%></li>
+        <li>the product belongs to <a href="/farms/<%=foundProduct.farm._id%>"><%= foundProduct.farm.name%></a></li>
+    </ul>
+    
+    
+
+
+<a href='/products'>back to all products</a>
+<a href='/products/<%=foundProduct._id%>/edit'>edit</a>
+<form action="/products/<%=foundProduct._id%>?_method=DELETE" method="POST">
+    <button>delete</button>
+</form>
+
+
+
+</body>
+</html>
